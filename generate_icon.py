@@ -91,6 +91,7 @@ light.data.node_tree.nodes["Emission"].inputs["Strength"].default_value = 0.01
 # setup world
 ################################################################################
 
+scene = bpy.data.scenes["Scene"]
 bkg_node = scene.world.node_tree.nodes["Background"]
 bkg_node.inputs["Color"].default_value = (0.3, 0.3, 0.3, 1.0)
 
@@ -100,7 +101,6 @@ bkg_node.inputs["Color"].default_value = (0.3, 0.3, 0.3, 1.0)
 
 print("Setting up render")
 
-scene = bpy.data.scenes["Scene"]
 scene.render.resolution_x = 800
 scene.render.resolution_y = 800
 scene.render.engine = "CYCLES"
